@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+   </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Universal Unit Converter</h1>
+            <p>Convert between different units quickly and easily</p>
+        </header>
+
+        <div class="converter-container">
+            <div class="converter-header">
+                <select class="category-selector">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                    <option value="time">Time</option>
+                </select>
+            </div>
+
+            <div class="conversion-area">
+                <div class="input-group">
+                    <label for="from-unit">From:</label>
+                    <select id="from-unit" class="unit-selector">
+                        <option value="meter">Meter (m)</option>
+                        <option value="kilometer">Kilometer (km)</option>
+                        <option value="centimeter">Centimeter (cm)</option>
+                        <option value="millimeter">Millimeter (mm)</option>
+                        <option value="mile">Mile (mi)</option>
+                        <option value="yard">Yard (yd)</option>
+                        <option value="foot">Foot (ft)</option>
+                        <option value="inch">Inch (in)</option>
+                    </select>
+                    <input type="number" id="input-value" placeholder="Enter value" value="1">
+                </div>
+
+                <button class="swap-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                    </svg>
+                    Swap
+                </button>
+
+                <div class="output-group">
+                    <label for="to-unit">To:</label>
+                    <select id="to-unit" class="unit-selector">
+                        <option value="foot">Foot (ft)</option>
+                        <option value="meter">Meter (m)</option>
+                        <option value="kilometer">Kilometer (km)</option>
+                        <option value="centimeter">Centimeter (cm)</option>
+                        <option value="millimeter">Millimeter (mm)</option>
+                        <option value="mile">Mile (mi)</option>
+                        <option value="yard">Yard (yd)</option>
+                        <option value="inch">Inch (in)</option>
+                    </select>
+                    <input type="number" id="output-value" placeholder="Result" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="conversion-history">
+            <h3 class="history-title">Recent Conversions</h3>
+            <ul class="history-list">
+                <li class="history-item">
+                    <span>1 Meter = 3.28084 Feet</span>
+                    <span>✓</span>
+                </li>
+                <li class="history-item">
+                    <span>1 Kilometer = 0.621371 Miles</span>
+                    <span>✓</span>
+                </li>
+                <li class="history-item">
+                    <span>1 Centimeter = 0.393701 Inches</span>
+                    <span>✓</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+  
+      <script src="script.js"></script>
+</body>
+</html>
